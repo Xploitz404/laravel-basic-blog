@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts', 'Backend\PostController')
     ->middleware('auth')
     ->except('show');
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
