@@ -41,7 +41,6 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        // dd($request->all());
         // guardar
         $post = Post::create([
             'user_id' => auth()->user()->id
